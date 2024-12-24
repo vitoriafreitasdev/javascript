@@ -1,0 +1,43 @@
+DOM
+Document Object Model
+
+- é um conjunto de objetos dentro do seu navegador que vai dar acesso aos componentes interno do seu website
+- funciona dentro dos navegadores quando estou rodando o javascript
+
+ÁRVORE DOM
+
+raiz: window(tudo do javascript esta dentro desse objeto)
+a janela do seu navegador é um objeto DOM e ele se chama window
+
+objetos dentro do window:
+location
+diz a localização do seu site, qual é a url, qual é a pagina atual e qual foi a anterior
+document
+é o documento atual
+history
+seu histórico, que vai guardando da onde se veio e pra onde se vai, facilitando a navegação dentro do seu site
+
+dentro do document tem o html
+dentro do html(parent) tem head(child) e body(child)
+dentro do head tem tags, como meta tittle
+dentro do body tem tags, como p e h1
+
+como selecionar elementos dentro da arvore dom
+
+por marca
+getElementsByTagName()
+consegue selecionar mais de 1 objeto, pois se consegue ter vários do msm tipo
+para selecionar o 1, coloque[0] no fim sem espaço, o 2 coloque o numero 1
+
+por ID
+getElementByTagId()
+
+por nome
+getElementsByName()
+
+por classe
+getElementsByClassName()
+
+por seletor
+querySelector()
+querySelectorAll()

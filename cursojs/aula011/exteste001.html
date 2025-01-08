@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>teste</title>
+</head>
+<style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h1{
+        text-align: center;
+    }
+    body{
+        text-align: center;
+    }
+
+    input#botao:hover{
+        background-color: rgb(56, 179, 179);
+        color: white;
+    }
+   
+</style>
+
+<body>
+    <h1>teste de maioridade</h1>
+    <p>
+        Qual é a sua idade? <input type="text" name="num" id="inum">
+        <input type="button" value="enviar" onclick="teste()" id="botao">
+    </p>
+    <div id="res">
+
+    </div>
+
+    <script>
+
+        function teste(){
+
+            var idade = window.document.getElementById('inum')
+            var res = window.document.getElementById('res')
+            var i = (idade.value)
+
+            if (i < 18){
+                res.innerHTML = `<p>voce é menor de idade </p>`
+            } else {
+                res.innerHTML = `<p>voce é maior de idade </p>`
+            }
+        }
+    </script>
+</body>
+</html>

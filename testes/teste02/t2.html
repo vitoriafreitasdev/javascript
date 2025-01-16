@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+</head>
+<body>
+    <h1>valor do metro quadrado</h1>
+    <div>
+        <label for="iterr1">Valor do primeiro terreno: </label>
+        <input type="number" name="terr1" id="iterr1">
+    </div>
+    <div>
+        <label for="im1">Metro quadrado do primeiro terreno: </label>
+        <input type="number" name="m1" id="im1">
+    </div>
+    <div>
+        <label for="iterr2">Valor do segundo terreno: </label>
+        <input type="number" name="terr2" id="iterr2">
+    </div>
+    <div>
+        <label for="im2">Metro quadrado do segundo terreno: </label>
+        <input type="number" name="m2" id="im2">
+    </div>
+
+    <div>
+        <input type="button" value="calcular" onclick="calcular()">
+    </div>
+
+    <p>Valor do metro quadrado do primeiro:</p>
+    <div id="res1">
+
+    </div>
+
+    <p>Valor do metro quadrado do segundo:</p>
+    <div id="res2">
+
+    </div>
+
+    <div id="b">
+
+    </div>
+
+    <script>
+        function calcular(){
+            let terr1 = document.getElementById('iterr1')
+            let terr2 = document.getElementById('iterr2')
+            let metro1 = document.getElementById('im1')
+            let metro2 = document.getElementById('im2')
+            let res1 = document.getElementById('res1')
+            let res2 = document.getElementById('res2')
+            let b = document.getElementById('b')
+            
+
+            let r1 = Number(terr1.value) / Number(metro1.value)
+            let r2 = Number(terr2.value) / Number(metro2.value)
+
+            res1.innerHTML = `${r1} reais`
+            res2.innerHTML = `${r2} reais`
+
+            if (r1 > r2){
+                b.innerHTML = `O segundo terreno é mais barato`
+            } else{
+                if (r2 > r1){
+                    b.innerHTML = `O primeiro terreno é mais barato`
+                } else (r2 == r1 && metro1.value > metro2.value);{
+                    b.innerHTML = `Os dois terreno tem o mesmo valor do metro quadrado, porem o primeiro é maior`
+                } if (r2 == r1 && metro2.value > metro1.value){
+                    b.innerHTML = `Os dois terreno tem o mesmo valor do metro quadrado, porem o segundo é maior` 
+                } else if (r2 == r1 && metro2.value == metro1.value){
+                    b.innerHTML = `Os dois terreno tem o mesmo valor do metro quadrado e o mesmo tamanho` 
+                }
+            }
+        }
+    </script>
+</body>
+</html>

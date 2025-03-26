@@ -12,7 +12,7 @@ function clicar(){
         }
 
     } else {
-        for(let c = i; c >= f; c-=1){
+        for(let c = i; c >= f; c--){
             res.innerHTML += (`${c} `)
         }
     }

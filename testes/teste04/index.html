@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+    <style>
+        body{
+            
+        }
+    </style>
+</head>
+<body>
+    <label for="num">Coloque a quantidade de linhas</label>
+    <input type="number" id="num">
+    <input type="button" value="enviar" id="verificar">
+
+    <script>
+        
+        let verificar = document.getElementById("verificar")
+        
+
+        verificar.addEventListener("click", () =>{
+            let linhas = parseInt(document.getElementById("num").value)
+            let body = document.body
+            if(linhas < 0){
+                alert("Coloque um valor valido, precisa ser maior que 0")
+            }
+             else if(linhas % 2 === 0){
+                body.style.backgroundColor = "lightblue"
+            } else {
+                document.body.style.backgroundColor = "rgb(143, 248, 213)"
+            }
+        })
+         
+
+
+    </script>
+</body>
+</htm
